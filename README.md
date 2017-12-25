@@ -1,0 +1,1 @@
+# Adler3D_RAIC2017_CodeWars
