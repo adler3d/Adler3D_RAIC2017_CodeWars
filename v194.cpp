@@ -390,8 +390,8 @@ struct t_app{
 
   PRO_FUNCGEN_GETP_BY_FIELD(Facility,id2obj,objs,int,id);
 
-  #define PRO_FUNCGEN_GETP_BY_ID(rettype,getp,arr,field_type,value,id2id)\
-    rettype*getp(field_type value){auto tmp=id2id[value];if(tmp<0)return nullptr;return &arr[tmp];}
+  #define PRO_FUNCGEN_GETP_BY_ID(rettype,getp,arr,t_id,id,id2id)\
+    rettype*getp(t_id id){auto tmp=id2id[id];if(tmp<0)return nullptr;return &arr[tmp];}
   //
 
   PRO_FUNCGEN_GETP_BY_ID(Vehicle,id2veh,vehs,int,id,id2vehid);
